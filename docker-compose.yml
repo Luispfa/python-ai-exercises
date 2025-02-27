@@ -1,0 +1,21 @@
+services:
+  ai_dev:
+    build: 
+      context: .
+      dockerfile: docker/python/Dockerfile
+    volumes:
+      - ./:/app
+    container_name: python_ia
+    mem_limit: 512m
+    tty: true
+    ports:
+      - "5000:5000"
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+    networks:
+      - python_network
+
+networks:
+    python_network:
