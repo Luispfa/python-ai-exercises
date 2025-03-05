@@ -5,3 +5,7 @@ matplotlib
 flask
 twilio
 python-dotenv
+flask
+openai
+pyngrok
+google-generativeai
