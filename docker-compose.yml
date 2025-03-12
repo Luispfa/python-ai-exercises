@@ -5,7 +5,7 @@ services:
       dockerfile: docker/python/Dockerfile
     volumes:
       - ./:/app
-    container_name: python_ia
+    container_name: python_ai
     mem_limit: 512m
     tty: true
     ports:
@@ -17,5 +17,20 @@ services:
     networks:
       - python_network
 
+  db:
+    image: mysql:8.0
+    container_name: mysql_ai
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: clinica_dental
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - python_network
+
 networks:
     python_network:
+volumes:
+  mysql_data:

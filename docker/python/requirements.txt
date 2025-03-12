@@ -9,3 +9,5 @@ flask
 openai
 pyngrok
 google-generativeai
+mysql-connector-python
+sqlalchemy
