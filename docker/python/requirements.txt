@@ -1,13 +1,15 @@
-numpy
+numpy==1.26.4
 pandas
 scikit-learn
 matplotlib
 flask
 twilio
 python-dotenv
-flask
 openai
 pyngrok
 google-generativeai
 mysql-connector-python
 sqlalchemy
+nltk
+spacy
+cython
