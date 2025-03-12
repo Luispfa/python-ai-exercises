@@ -1,11 +1,10 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
-import citas_data
-import datetime
+from docker.python.Database.table_data import load_table_data
 
 def entrenar_modelo():
-    df = citas_data.load_citas_data()
+    df = load_table_data("citas")
     if df is None:
         return None
 

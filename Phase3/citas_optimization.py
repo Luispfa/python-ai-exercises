@@ -4,11 +4,11 @@ from sklearn.linear_model import LinearRegression
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
-import citas_data
+from docker.python.Database.table_data import load_table_data
 import datetime
 
 def optimize_citas():
-    df = citas_data.load_citas_data()
+    df = load_table_data("citas")
     if df is None:
         return
 
